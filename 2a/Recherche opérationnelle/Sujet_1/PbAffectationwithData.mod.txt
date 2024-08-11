@@ -1,0 +1,64 @@
+#  GLPK model file created by SUN for RO teaching
+
+
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set TACHES;
+
+set PERSONNES;
+
+################### Variables ###################
+
+## To declare binary variables : 
+var Q{i in PERSONNES ,j in TACHES}, binary; 
+
+
+###################  Constants: Data to load   #########################
+
+param MatriceDePreference{i in PERSONNES ,j in TACHES};
+
+################### Constraints ###################
+
+
+s.t. RespectTacheAffectee{j in TACHES}:
+  sum{i in PERSONNES} Q[i,j] = 1;
+
+s.t. RespectPersonneAffectee{i in PERSONNES}:
+  sum{j in TACHES} Q[i,j] = 1;
+
+
+###### Objective ######
+
+maximize Affectation: 
+		sum{i in PERSONNES}  sum{j in TACHES} Q[i,j]* MatriceDePreference[i,j]; 
+
+#end;
+
+
+#default data
+
+data;
+
+set TACHES := 
+T1
+T2
+T3;
+
+set PERSONNES :=
+P1
+P2
+P3;
+
+param MatriceDePreference : T1 T2 T3 :=
+P1 4 7 3
+P2 9 8 4
+P3 2 1 5;
+
+
+
+
+end;

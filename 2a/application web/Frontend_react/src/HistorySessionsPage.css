@@ -1,0 +1,84 @@
+/* HistorySessionsPage.css */
+
+.history-sessions-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.history-sessions-header {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.history-sessions-button {
+    background-color: #007bff;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.history-sessions-card {
+    margin: 1rem auto;
+    max-width: 500px;
+    background-color: #f5f5dc;
+    border: 2px solid #000;
+}
+
+.history-sessions-card-title {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.history-sessions-card-text {
+    color: #333;
+}
+
+.history-sessions-modal {
+    text-align: left;
+}
+
+.history-sessions-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.history-sessions-modal-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.history-sessions-modal-body {
+    background-color: #f9f9f9;
+}
+
+.history-sessions-modal-footer {
+    background-color: #f1f1f1;
+}
+
+.history-sessions-modal-title {
+    font-size: 4rem;
+}
+
+.history-sessions-back-button {
+    background-color: red; 
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+.modal-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

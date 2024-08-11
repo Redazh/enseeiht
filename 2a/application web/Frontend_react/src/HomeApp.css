@@ -1,0 +1,87 @@
+.homepage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout-button, .title-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: #f44336;
+}
+
+.logout-button:hover {
+    background-color: #c33c25;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.section {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.session-button {
+    background-color: #4CAF50;
+}
+
+.matiere-button {
+    background-color: #2196F3;
+}
+
+.feedback-button {
+    background-color: #FF9800;
+}
+
+.messaging-button {
+    background-color: #9C27B0;
+}
+
+.stats-button {
+    background-color: #00BCD4;
+}
+
+.support-button {
+    background-color: #E91E63;
+}
+
+.settings-button {
+    background-color: #607D8B;
+}
+
+.history-button {
+    background-color: #FF5722;
+}
+
+.title-button:hover {
+    opacity: 0.8;
+}
+
+.title-button h2 {
+    margin: 0;
+}

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.user-type-container {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.user-type-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s; 
+    border: 2px solid #000; 
+}
+
+.user-type-label:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff; 
+}
+
+
+.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.button-container button {
+    width: 48%; 
+}
+
+.button-container button:last-child {
+    margin-left: 4%; 
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.user-type-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .user-type-button {
+    background-color: #007bff; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .user-type-button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .user-type-button.active {
+    background-color: #0056b3;
+    color: white;
+    border: 2px solid #004085;
+  }
+  

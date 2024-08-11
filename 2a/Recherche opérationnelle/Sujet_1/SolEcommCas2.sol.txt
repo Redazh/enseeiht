@@ -1,0 +1,137 @@
+Problem:    EcomCas2
+Rows:       39
+Columns:    36 (36 integer, 30 binary)
+Non-zeros:  156
+Status:     INTEGER OPTIMAL
+Objective:  Distance = 22 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 RespectVisiter[ALPHA]
+                                   1             1             = 
+     2 RespectVisiter[C1]
+                                   1             1             = 
+     3 RespectVisiter[C2]
+                                   1             1             = 
+     4 RespectVisiter[C3]
+                                   1             1             = 
+     5 RespectVisiter[C4]
+                                   1             1             = 
+     6 RespectVisiter[C5]
+                                   1             1             = 
+     7 RespectQuitter[ALPHA]
+                                   1             1             = 
+     8 RespectQuitter[C1]
+                                   1             1             = 
+     9 RespectQuitter[C2]
+                                   1             1             = 
+    10 RespectQuitter[C3]
+                                   1             1             = 
+    11 RespectQuitter[C4]
+                                   1             1             = 
+    12 RespectQuitter[C5]
+                                   1             1             = 
+    13 EliminationSousTours[C1,C2]
+                                   4                           5 
+    14 EliminationSousTours[C1,C3]
+                                   1                           5 
+    15 EliminationSousTours[C1,C4]
+                                   2                           5 
+    16 EliminationSousTours[C1,C5]
+                                   3                           5 
+    17 EliminationSousTours[C2,C1]
+                                  -4                           5 
+    18 EliminationSousTours[C2,C3]
+                                  -3                           5 
+    19 EliminationSousTours[C2,C4]
+                                  -2                           5 
+    20 EliminationSousTours[C2,C5]
+                                   5                           5 
+    21 EliminationSousTours[C3,C1]
+                                   5                           5 
+    22 EliminationSousTours[C3,C2]
+                                   3                           5 
+    23 EliminationSousTours[C3,C4]
+                                   1                           5 
+    24 EliminationSousTours[C3,C5]
+                                   2                           5 
+    25 EliminationSousTours[C4,C1]
+                                  -2                           5 
+    26 EliminationSousTours[C4,C2]
+                                   2                           5 
+    27 EliminationSousTours[C4,C3]
+                                   5                           5 
+    28 EliminationSousTours[C4,C5]
+                                   1                           5 
+    29 EliminationSousTours[C5,C1]
+                                  -3                           5 
+    30 EliminationSousTours[C5,C2]
+                                   1                           5 
+    31 EliminationSousTours[C5,C3]
+                                  -2                           5 
+    32 EliminationSousTours[C5,C4]
+                                   5                           5 
+    33 UneSeuleTour[ALPHA]
+                                   1             1             6 
+    34 UneSeuleTour[C1]
+                                   5             1             6 
+    35 UneSeuleTour[C2]
+                                   1             1             6 
+    36 UneSeuleTour[C3]
+                                   4             1             6 
+    37 UneSeuleTour[C4]
+                                   3             1             6 
+    38 UneSeuleTour[C5]
+                                   2             1             6 
+    39 Distance                   22                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 Q[C1,ALPHA]  *              1             0             1 
+     2 Q[C2,ALPHA]  *              0             0             1 
+     3 Q[C3,ALPHA]  *              0             0             1 
+     4 Q[C4,ALPHA]  *              0             0             1 
+     5 Q[C5,ALPHA]  *              0             0             1 
+     6 Q[ALPHA,C1]  *              0             0             1 
+     7 Q[C2,C1]     *              0             0             1 
+     8 Q[C3,C1]     *              1             0             1 
+     9 Q[C4,C1]     *              0             0             1 
+    10 Q[C5,C1]     *              0             0             1 
+    11 Q[ALPHA,C2]  *              1             0             1 
+    12 Q[C1,C2]     *              0             0             1 
+    13 Q[C3,C2]     *              0             0             1 
+    14 Q[C4,C2]     *              0             0             1 
+    15 Q[C5,C2]     *              0             0             1 
+    16 Q[ALPHA,C3]  *              0             0             1 
+    17 Q[C1,C3]     *              0             0             1 
+    18 Q[C2,C3]     *              0             0             1 
+    19 Q[C4,C3]     *              1             0             1 
+    20 Q[C5,C3]     *              0             0             1 
+    21 Q[ALPHA,C4]  *              0             0             1 
+    22 Q[C1,C4]     *              0             0             1 
+    23 Q[C2,C4]     *              0             0             1 
+    24 Q[C3,C4]     *              0             0             1 
+    25 Q[C5,C4]     *              1             0             1 
+    26 Q[ALPHA,C5]  *              0             0             1 
+    27 Q[C1,C5]     *              0             0             1 
+    28 Q[C2,C5]     *              1             0             1 
+    29 Q[C3,C5]     *              0             0             1 
+    30 Q[C4,C5]     *              0             0             1 
+    31 U[C2]        *              1                             
+    32 U[C1]        *              5                             
+    33 U[C3]        *              4                             
+    34 U[C4]        *              3                             
+    35 U[C5]        *              2                             
+    36 U[ALPHA]     *              1                             
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

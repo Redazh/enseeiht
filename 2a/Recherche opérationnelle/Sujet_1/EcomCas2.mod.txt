@@ -1,0 +1,72 @@
+#  GLPK model file created by SUN for RO teaching
+
+
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set ALPHAETCLIENT;
+
+################### Variables ###################
+
+## To declare binary variables : 
+var Q{i in ALPHAETCLIENT ,j in ALPHAETCLIENT},binary;
+
+## variable pour eviter les sous-tours(Miller–Tucker–Zemlin formulation)
+var U{i in ALPHAETCLIENT},integer;
+
+
+
+###################  Constants: Data to load   #########################
+
+param MatriceDesDistances{i in ALPHAETCLIENT ,j in ALPHAETCLIENT};
+
+################### Constraints ###################
+
+s.t. RespectVisiter{j in ALPHAETCLIENT}:
+    sum{i in ALPHAETCLIENT:i!=j} Q[i, j] = 1;
+
+s.t. RespectQuitter{i in ALPHAETCLIENT}:
+    sum{j in ALPHAETCLIENT:j!=i} Q[i, j] = 1;
+    
+s.t. EliminationSousTours{i in ALPHAETCLIENT, j in ALPHAETCLIENT: i != 'ALPHA' and j != 'ALPHA' and i != j}:
+    U[i] - U[j] + card(ALPHAETCLIENT) * Q[i, j] <= card(ALPHAETCLIENT) - 1;
+
+s.t. UneSeuleTour{i in ALPHAETCLIENT}:
+    1 <= U[i] <= card(ALPHAETCLIENT);
+    
+
+###### Objective ######
+
+minimize Distance:
+    sum{i in ALPHAETCLIENT} sum{j in ALPHAETCLIENT} MatriceDesDistances[i, j] * Q[i, j];
+
+#end;
+
+
+#default data
+
+data;
+
+set ALPHAETCLIENT :=
+ALPHA
+C1
+C2
+C3
+C4
+C5;
+
+param MatriceDesDistances : ALPHA C1 C2 C3 C4 C5 :=
+ALPHA 0 1 1 10 12 12
+C1 1 0 1 8 10 11
+C2 1 1 0 8 11 10
+C3 10 8 8 0 1 1
+C4 12 10 11 1 0 1
+C5 12 11 10 1 1 0;
+
+
+
+
+end;

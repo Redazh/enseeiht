@@ -1,0 +1,144 @@
+.feedback-statistics-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .back-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .animated-title {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: colorChange 3s infinite;
+    margin-top: 0;
+  }
+  
+  @keyframes colorChange {
+    0% { color: #333; }
+    25% { color: #ff5733; }
+    50% { color: #33c3ff; }
+    75% { color: #ff33b8; }
+    100% { color: #333; }
+  }
+  
+  .average-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .rating-value {
+    margin-right: 10px;
+  }
+  
+  .stars {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 2rem;
+    color: #ccc;
+    position: relative;
+  }
+  
+  .star.filled {
+    color: #ffd700;
+  }
+  
+  .star.fractional {
+    position: relative;
+    color: #ccc;
+  }
+  
+  .star.fractional::before {
+    content: '★';
+    color: #ffd700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--fraction);
+    overflow: hidden;
+  }
+  
+  .ratings-distribution {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .rating-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .star-count {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .star-count .star {
+    margin-left: 5px;
+    color: #ffd700;
+  }
+  
+  .progress-bar {
+    flex: 4;
+    background: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .progress {
+    background: #ffd700;
+    height: 100%;
+  }
+  
+  .count {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .tutor-feedback-section {
+    margin-bottom: 40px;
+  }
+  
